@@ -1,8 +1,10 @@
 .titre {
-  color: red;
+  color: black;
+  display: inline-block;
+  cursor: pointer;
 }
 .titre:hover {
-  color: black;
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

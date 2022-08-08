@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/oHminod/projet-3-OpenClassRooms/issues"
   },
-  "homepage": "https://github.com/oHminod/projet-3-OpenClassRooms#readme"
+  "homepage": "https://github.com/oHminod/projet-3-OpenClassRooms#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }

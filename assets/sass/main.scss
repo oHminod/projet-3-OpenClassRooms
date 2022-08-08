@@ -1,6 +1,8 @@
 .titre {
-    color: red;
+    color: black;
+    display: inline-block;
+    cursor: pointer;
     &:hover {
-        color: black;
+        color: red;
     }
 }
