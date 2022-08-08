@@ -1,0 +1,19 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oHminod/projet-3-OpenClassRooms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oHminod/projet-3-OpenClassRooms/issues"
+  },
+  "homepage": "https://github.com/oHminod/projet-3-OpenClassRooms#readme"
+}
