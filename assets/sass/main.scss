@@ -1,8 +1,125 @@
-.titre {
-    color: black;
-    display: inline-block;
-    cursor: pointer;
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+$grisfonce: #EAEAEA;
+$grisclair: #F6F6F6;
+$gristxt: #606060;
+
+@mixin card_shadow {
+    transition: box-shadow .3s;
+    box-shadow: 0px 2px 15px rgba(15, 15, 15, .25);
+}
+@mixin card_shadow_hover {
+    box-shadow: 0px 7px 25px rgba(15, 15, 15, .30);
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.logo {
+    font-family: Shrikhand, cursive;;
+    font-size: 16px;
+    letter-spacing: .5px;  
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(15, 15, 15, .15);
+    padding-bottom: 5px;
+    @media screen and (min-width: 280px) {
+        font-size: calc(16px + 16 * (100vw - 280px) / 744);
+        padding-bottom: calc(5px + 38 * (100vw - 280px) / 744);
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 32px;
+        padding-bottom: 43px;
+    }
+    h1 {
+        margin-bottom: 0;
+    }
+}
+.lieu {
+    background-color: $grisfonce;
+    text-align: center;
+    padding: 5px 0;
+    position: relative;
+    z-index: -1;
+    i {
+        margin-right: 15px;
+    }
+    p {
+        font-weight: 500;
+        color: $gristxt;
+        margin: 11px 0;
+    }
+}
+
+.reservation {
+    background-color: $grisclair;
+    padding: 40px 45px;
+    text-align: center;
+    h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        letter-spacing: .2px;
+        color: #303030;
+    }
+    p {
+        font-weight: 300;
+        letter-spacing: -.2px;
+        font-size: 17px;
+        color: $gristxt;
+    }
+    a {
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 25.2px;
+        background: linear-gradient(350deg, $primaire, $secondaire);
+        color: white;
+        padding: 16px 22px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        @include card_shadow();
+        &:hover {
+            @include card_shadow_hover();
+        }
+    }
+}
+.fonctionnement {
+    padding: 20px;
+}
+.fonctionnement__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $grisclair;
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    @include card_shadow();
     &:hover {
-        color: red;
+        @include card_shadow_hover();
+    }
+    p {
+        font-weight: 500;
+        text-align: center;
+        display: block;
+        width: 100%;
+        &:first-child {
+            color: white;
+            background-color: $primaire;
+            border-radius: 100%;
+            padding: 8px;
+            margin: 0;
+            height: 6.7px;
+            line-height: 6.7px;
+            font-size: 12px;
+            margin-left: -21px;
+            margin-right: 5px;
+            width: auto;
+        }
+    }
+    i {
+        margin-right: 8%;
+        font-size: 18px;
+        color: $gristxt;
     }
 }
