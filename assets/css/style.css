@@ -1,3 +1,12 @@
+.card_shadow, .fonctionnement__card, .reservation a {
+  transition: box-shadow 0.3s;
+  box-shadow: 0px 2px 15px rgba(15, 15, 15, 0.25);
+}
+
+.card_shadow_hover, .fonctionnement__card:hover, .reservation a:hover {
+  box-shadow: 0px 7px 25px rgba(15, 15, 15, 0.3);
+}
+
 body {
   font-family: Roboto, sans-serif;
 }
@@ -68,13 +77,7 @@ body {
   padding: 16px 22px;
   margin-top: 15px;
   margin-bottom: 15px;
-  transition: box-shadow 0.3s;
-  box-shadow: 0px 2px 15px rgba(15, 15, 15, 0.25);
 }
-.reservation a:hover {
-  box-shadow: 0px 7px 25px rgba(15, 15, 15, 0.3);
-}
-
 .fonctionnement {
   padding: 20px;
 }
@@ -87,11 +90,6 @@ body {
   padding: 10px;
   border-radius: 25px;
   margin-bottom: 30px;
-  transition: box-shadow 0.3s;
-  box-shadow: 0px 2px 15px rgba(15, 15, 15, 0.25);
-}
-.fonctionnement__card:hover {
-  box-shadow: 0px 7px 25px rgba(15, 15, 15, 0.3);
 }
 .fonctionnement__card p {
   font-weight: 500;
