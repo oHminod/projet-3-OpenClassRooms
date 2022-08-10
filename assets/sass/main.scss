@@ -5,6 +5,10 @@ $grisfonce: #EAEAEA;
 $grisclair: #F6F6F6;
 $gristxt: #606060;
 
+html, body {
+    height: 100%;
+}
+
 .card_shadow {
     transition: box-shadow .3s, background-color .3s;
     box-shadow: 0px 2px 15px rgba(15, 15, 15, .25);
@@ -15,11 +19,18 @@ $gristxt: #606060;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Roboto, sans-serif;
     /*@media screen and (min-width: 768px) {
         max-width: 1340px;
         margin: 0 auto;
     }*/
+}
+
+.max-width {
+    max-width: 1340px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -59,9 +70,12 @@ body {
 }
 
 .callto {
+    @extend .max-width;
     @media screen and (min-width: 768px) {
         display: flex;
         flex-direction: row;
+        box-shadow: 0px 10px 10px rgba(15, 15, 15, .15);
+        transition: box-shadow .3s;
     }
 }
 

@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 .card_shadow, .fonctionnement__card, .reservation a {
   transition: box-shadow 0.3s, background-color 0.3s;
   box-shadow: 0px 2px 15px rgba(15, 15, 15, 0.25);
@@ -8,11 +12,18 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Roboto, sans-serif;
   /*@media screen and (min-width: 768px) {
       max-width: 1340px;
       margin: 0 auto;
   }*/
+}
+
+.max-width, .callto {
+  max-width: 1340px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -59,6 +70,8 @@ body {
   .callto {
     display: flex;
     flex-direction: row;
+    box-shadow: 0px 10px 10px rgba(15, 15, 15, 0.15);
+    transition: box-shadow 0.3s;
   }
 }
 
