@@ -9,6 +9,7 @@ $gristxt: #606060;
     transition: box-shadow .3s, background-color .3s;
     box-shadow: 0px 2px 15px rgba(15, 15, 15, .25);
 }
+
 .card_shadow_hover {
     box-shadow: 0px 7px 25px rgba(15, 15, 15, .30);
 }
@@ -22,7 +23,7 @@ body {
 }
 
 .logo {
-    font-family: Shrikhand, cursive;;
+    font-family: Shrikhand, cursive;
     font-size: 16px;
     letter-spacing: .5px;  
     text-align: center;
@@ -40,6 +41,7 @@ body {
         margin: 0;
     }
 }
+
 .lieu {
     background-color: $grisfonce;
     text-align: center;
@@ -101,6 +103,7 @@ body {
         justify-content: center;
     }
 }
+
 .fonctionnement {
     padding: 20px;
     @media screen and (min-width: 768px) {
@@ -108,6 +111,7 @@ body {
         text-align: center;
     }
 }
+
 .fonctionnement__card {
     display: flex;
     flex-direction: row;
@@ -147,12 +151,6 @@ body {
     &:nth-child(2) {
         i {
             margin-left: 20px;
-        }
-    }
-    &:nth-child(4) {
-        i {
-            margin-left: 5px;
-            margin-right: calc(8% - 5px);
         }
     }
     &:hover {
