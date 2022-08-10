@@ -1,5 +1,5 @@
 .card_shadow, .fonctionnement__card, .reservation a {
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, background-color 0.3s;
   box-shadow: 0px 2px 15px rgba(15, 15, 15, 0.25);
 }
 
@@ -9,6 +9,10 @@
 
 body {
   font-family: Roboto, sans-serif;
+  /*@media screen and (min-width: 768px) {
+      max-width: 1340px;
+      margin: 0 auto;
+  }*/
 }
 
 .logo {
@@ -51,6 +55,13 @@ body {
   margin: 11px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .callto {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .reservation {
   background-color: #F6F6F6;
   padding: 40px 45px;
@@ -78,14 +89,32 @@ body {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+@media screen and (min-width: 768px) {
+  .reservation {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .fonctionnement {
   padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    flex-basis: 50%;
+    text-align: center;
+  }
 }
 
 .fonctionnement__card {
   display: flex;
   flex-direction: row;
   align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
   background-color: #F6F6F6;
   padding: 10px;
   border-radius: 25px;
@@ -114,6 +143,20 @@ body {
   margin-right: 8%;
   font-size: 18px;
   color: #606060;
+  transition: color 0.3s;
+}
+.fonctionnement__card:nth-child(2) i {
+  margin-left: 20px;
+}
+.fonctionnement__card:nth-child(4) i {
+  margin-left: 5px;
+  margin-right: calc(8% - 5px);
+}
+.fonctionnement__card:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement__card:hover i {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
