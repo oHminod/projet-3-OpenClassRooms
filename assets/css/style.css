@@ -2,12 +2,12 @@ html, body {
   height: 100%;
 }
 
-.card_shadow, .fonctionnement__card, .reservation a {
+.card_shadow, .restau__card, .fonctionnement__card, .reservation a {
   transition: box-shadow 0.3s, background-color 0.3s;
   box-shadow: 0px 2px 15px rgba(15, 15, 15, 0.25);
 }
 
-.card_shadow_hover, .fonctionnement__card:hover, .reservation a:hover {
+.card_shadow_hover, .restau__card:hover, .fonctionnement__card:hover, .reservation a:hover {
   box-shadow: 0px 7px 25px rgba(15, 15, 15, 0.3);
 }
 
@@ -21,7 +21,7 @@ body {
   }*/
 }
 
-.max-width, .callto {
+.max-width, main, .callto {
   max-width: 1340px;
   margin: 0 auto;
 }
@@ -166,6 +166,86 @@ body {
 }
 .fonctionnement__card:hover i {
   color: #9356DC;
+}
+
+main {
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  main {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.restau__card {
+  text-decoration: none;
+  display: block;
+  color: #303030;
+  position: relative;
+  max-height: 250px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+.restau__card img {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restau__card .nouveau {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  padding: 8px;
+  font-size: 14px;
+  color: green;
+  font-weight: 500;
+}
+.restau__card .legende {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restau__card h3 {
+  margin: 10px;
+  margin-left: 15px;
+}
+.restau__card p {
+  margin: 10px;
+  margin-left: 15px;
+  font-weight: 300;
+  color: #606060;
+}
+.restau__card .coeur {
+  margin-right: 15px;
+  font-size: 20px;
+}
+.restau__card .coeur:hover i:before {
+  content: "\f004";
+}
+.restau__card .coeur:hover i {
+  color: linear-gradient(350deg, #9356DC, #FF79DA);
+}
+@media screen and (min-width: 768px) {
+  .restau__card {
+    margin: 20px;
+    min-width: 400px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

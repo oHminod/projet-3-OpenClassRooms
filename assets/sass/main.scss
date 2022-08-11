@@ -175,3 +175,84 @@ body {
         }
     }
 }
+main {
+    padding: 20px;
+    @extend .max-width;
+    @media screen and (max-width: 768px) {
+        margin: 0;
+    }
+}
+
+.restaurants {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+}
+.restau__card {
+    text-decoration: none;
+    display: block;
+    color: #303030;
+    position: relative;
+    max-height: 250px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 15px;
+    @extend .card_shadow;
+    img {
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .nouveau {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: $tertiaire;
+        padding: 8px;
+        font-size: 14px;
+        color: green;
+        font-weight: 500;
+    }
+    .legende {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h3 {
+        margin: 10px;
+        margin-left: 15px;
+    }
+    p {
+        margin: 10px;
+        margin-left: 15px;
+        font-weight: 300;
+        color: $gristxt;
+    }
+    .coeur {
+        margin-right: 15px;
+        font-size: 20px;
+        &:hover {
+            i:before {
+                content: "\f004";
+            }
+            i {
+                color: linear-gradient(350deg, $primaire, $secondaire);
+            }
+         }
+    }
+    &:hover {
+        @extend .card_shadow_hover;
+    }
+    @media screen and (min-width: 768px) {
+        margin: 20px;
+        min-width: 400px;
+    }
+}
