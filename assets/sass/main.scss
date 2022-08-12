@@ -177,17 +177,57 @@ body {
 }
 main {
     padding: 20px;
+    flex: 1 0 auto;
     @extend .max-width;
     @media screen and (max-width: 768px) {
         margin: 0;
     }
+    @media screen and (min-width: 768px) {
+        padding: 20px 0;
+    }
+    h2 {
+        @media screen and (min-width: 768px) {
+            margin-left: 20px;
+        }
+    }
 }
 
+.restaubox {
+    position: relative;
+    max-width: 100vw;
+    .masque-g {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            left:0;
+            width: 20px;
+            height: 100%;
+            background: linear-gradient(270deg, transparent, white);
+        }
+    }
+    .masque-d {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            right:0;
+            width: 20px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, white);
+        }
+    }
+}
 .restaurants {
-    @media screen and (min-width: 768px) {
+    .dernier-espace {
+        min-width: 20px;
+    }
+        @media screen and (min-width: 768px) {
+        overflow: scroll;
         display: flex;
         flex-direction: row;
-        overflow: scroll;
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
@@ -239,12 +279,28 @@ main {
     .coeur {
         margin-right: 15px;
         font-size: 20px;
+        position: relative;
+        .fa-gradient {
+            color: $primaire;
+            background: -webkit-linear-gradient(230deg, $primaire, $secondaire);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        i {
+            transition: opacity .3s;
+        }
+        i:nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: 1px;
+            opacity: 0%;
+        }
         &:hover {
-            i:before {
-                content: "\f004";
+            i:first-child {
+                opacity: 0%;
             }
-            i {
-                color: linear-gradient(350deg, $primaire, $secondaire);
+            i:nth-child(2) {
+                opacity: 100%;
             }
          }
     }
@@ -254,5 +310,50 @@ main {
     @media screen and (min-width: 768px) {
         margin: 20px;
         min-width: 400px;
+    }
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #303030;
+    padding: 30px;
+    color: white;
+    margin-top: 30px;
+    h2 {
+        font-family: Shrikhand, cursive;
+        width: 100%;
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: $secondaire;
+        }
+    }
+    p {
+        margin: 10px 0;
+        margin-right: 30px;
+        font-weight: 300;
+        &:nth-child(2) {
+            font-weight: 500;
+        }
+        &:nth-child(3) {
+            font-weight: 500;
+        }
+    }
+    i {
+        font-size: 14px;
+        margin-right: 15px;
+        &.rotate {
+            transform: rotate(-45deg);
+            font-size: 10px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;    
     }
 }

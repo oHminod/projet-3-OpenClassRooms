@@ -170,18 +170,65 @@ body {
 
 main {
   padding: 20px;
+  flex: 1 0 auto;
 }
 @media screen and (max-width: 768px) {
   main {
     margin: 0;
   }
 }
+@media screen and (min-width: 768px) {
+  main {
+    padding: 20px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  main h2 {
+    margin-left: 20px;
+  }
+}
 
+.restaubox {
+  position: relative;
+  max-width: 100vw;
+}
+.restaubox .masque-g {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .restaubox .masque-g {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(270deg, transparent, white);
+  }
+}
+.restaubox .masque-d {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .restaubox .masque-d {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, white);
+  }
+}
+
+.restaurants .dernier-espace {
+  min-width: 20px;
+}
 @media screen and (min-width: 768px) {
   .restaurants {
+    overflow: scroll;
     display: flex;
     flex-direction: row;
-    overflow: scroll;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -234,17 +281,80 @@ main {
 .restau__card .coeur {
   margin-right: 15px;
   font-size: 20px;
+  position: relative;
 }
-.restau__card .coeur:hover i:before {
-  content: "\f004";
+.restau__card .coeur .fa-gradient {
+  color: #9356DC;
+  background: -webkit-linear-gradient(230deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.restau__card .coeur:hover i {
-  color: linear-gradient(350deg, #9356DC, #FF79DA);
+.restau__card .coeur i {
+  transition: opacity 0.3s;
+}
+.restau__card .coeur i:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  opacity: 0%;
+}
+.restau__card .coeur:hover i:first-child {
+  opacity: 0%;
+}
+.restau__card .coeur:hover i:nth-child(2) {
+  opacity: 100%;
 }
 @media screen and (min-width: 768px) {
   .restau__card {
     margin: 20px;
     min-width: 400px;
+  }
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: #303030;
+  padding: 30px;
+  color: white;
+  margin-top: 30px;
+}
+footer h2 {
+  font-family: Shrikhand, cursive;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: #FF79DA;
+}
+footer p {
+  margin: 10px 0;
+  margin-right: 30px;
+  font-weight: 300;
+}
+footer p:nth-child(2) {
+  font-weight: 500;
+}
+footer p:nth-child(3) {
+  font-weight: 500;
+}
+footer i {
+  font-size: 14px;
+  margin-right: 15px;
+}
+footer i.rotate {
+  transform: rotate(-45deg);
+  font-size: 10px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
