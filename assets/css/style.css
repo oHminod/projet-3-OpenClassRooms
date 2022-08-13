@@ -27,7 +27,7 @@ html, body {
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 .btn-gradient:hover, .menu .commander:hover, .reservation a:hover {
-  color: #b6ffcd;
+  background: linear-gradient(170deg, #9239ff, #ff3ec8);
 }
 
 body {
@@ -351,6 +351,9 @@ main {
   left: 0;
   top: 1px;
   opacity: 0%;
+}
+.coeur:hover, .menu .menu__titre p.heart:hover {
+  cursor: pointer;
 }
 .coeur:hover i:first-child, .menu .menu__titre p.heart:hover i:first-child {
   opacity: 0%;
@@ -697,6 +700,61 @@ main.restau_menu {
 .anim-19 {
   opacity: 0;
   animation: 0.4s ease-in-out 3.8s 1 slideIn forwards;
+}
+
+.anim-20 {
+  opacity: 0;
+  animation: 0.4s ease-in-out 4s 1 slideIn forwards;
+}
+
+/* LOADER
+
+
+*/
+.loader {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  z-index: 300;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #99E2D0;
+  animation: 0.4s ease-in-out 1.6s 1 loader forwards;
+}
+.loader .progress_container {
+  width: 60%;
+}
+.loader .progress {
+  height: 30px;
+  background-color: #FF79DA;
+  animation: 1.6s ease-in-out 0s 1 progress forwards;
+}
+.loader p {
+  font-size: 22px;
+  font-weight: 200;
+  color: #9356DC;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

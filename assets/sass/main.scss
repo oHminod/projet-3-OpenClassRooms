@@ -34,7 +34,7 @@ html, body {
     transition: box-shadow .3s, background-color .3s, color .3s;
     @extend .card_shadow;
     &:hover {
-        color: #b6ffcd;
+        background: linear-gradient(170deg, #9239ff, #ff3ec8);
         @extend .card_shadow_hover;
     }
 }
@@ -349,6 +349,7 @@ main {
         opacity: 0%;
     }
     &:hover {
+        cursor: pointer;
         i:first-child {
             opacity: 0%;
         }
@@ -610,10 +611,66 @@ main.restau_menu {
     }
 }
 
-@for $i from 0 to 20 {
+@for $i from 0 to 21 {
     .anim-#{$i} {
         opacity: 0;
         animation: .4s ease-in-out calc(.2s * $i) 1 slideIn forwards;
     }
 }
 
+
+
+
+/* LOADER
+
+
+*/
+
+
+
+.loader {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 300;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: $tertiaire;
+    animation: .4s ease-in-out 1.6s 1 loader forwards;
+    .progress_container {
+        width: 60%;
+    }
+    .progress {
+        height: 30px;
+        background-color: $secondaire;
+        animation: 1.6s ease-in-out 0s 1 progress forwards;
+    }
+    p {
+        font-size: 22px;
+        font-weight: 200;
+        color: $primaire;
+    }
+}
+
+@keyframes loader {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
