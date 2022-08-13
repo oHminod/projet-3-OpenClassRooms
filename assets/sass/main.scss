@@ -5,6 +5,10 @@ $grisfonce: #EAEAEA;
 $grisclair: #F6F6F6;
 $gristxt: #606060;
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     height: 100%;
 }
@@ -27,8 +31,10 @@ html, body {
     padding: 16px 22px;
     margin-top: 15px;
     margin-bottom: 15px;
+    transition: box-shadow .3s, background-color .3s, color .3s;
     @extend .card_shadow;
     &:hover {
+        color: #b6ffcd;
         @extend .card_shadow_hover;
     }
 }
@@ -56,21 +62,28 @@ body {
     text-align: center;
     box-shadow: 0px 2px 5px rgba(15, 15, 15, .15);
     padding: 5px 0;
-    i {
+   i {
         position: absolute;
+        padding: 5px 5.75px;
+        border: 2px solid transparent;
+        border-radius: 100%;
         left: 10px;
-        top: 18px;
+        top: 9px;
         color: #303030;
+        transition: color .2s, border .3s;
         &:hover {
+            border: 2px solid $primaire;
             color: $primaire;
         }
         @media screen and (min-width: 280px) {
-            top: calc(18px + 42 * (100vw - 280px) / 744);
+            top: calc(9px + 46 * (100vw - 280px) / 744);
             left: calc(10px + 50 * (100vw - 280px) / 744);
+            padding: 5px calc(5.75px + 1 * (100vw - 280px) / 744);
         }
         @media screen and (min-width: 1024px) {
-            top: 60px;
+            top: 55px;
             left: 60px;
+            padding: 5px 6.75px;
         }
     }
     @media screen and (min-width: 280px) {
@@ -515,7 +528,7 @@ main.restau_menu {
         i {
             margin-right: -16px;
             transform: rotate(180deg);
-            transition: margin-right .3s, transform .5s;
+            transition: margin-right .3s, transform .4s .1s;
             color: white;
             font-size: 20px;
         }
@@ -573,8 +586,9 @@ main.restau_menu {
     }
 }
 
-@for $i from 0 to 10 {
+@for $i from 0 to 11 {
     .anim-#{$i} {
+        opacity: 0;
         animation: .4s ease-in-out calc(.2s * $i) 1 slideIn forwards;
     }
 }
