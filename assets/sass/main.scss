@@ -269,6 +269,11 @@ main {
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        } 
     }
 }
 .restau__card {
@@ -451,6 +456,8 @@ main.restau_menu {
         @extend .btn-gradient;
         opacity: 0;
         margin: 30px 0;
+        padding-left: 50px;
+        padding-right: 50px;
     }
     .menu__titre {
         display: flex;
@@ -535,28 +542,45 @@ main.restau_menu {
     }
     .plats__card {
         display: flex;
-        justify-content: space-between;
         border-radius: 10px;
-        padding: 8px;
+        justify-content: space-between;
         width: 100%;
         transition: width .3s, height .3s;
-        h4 {
-            margin: 8px 0;
-            font-size: 18px;
-            font-weight: 500;
-            color: #303030;
-        }
-        p {
-            font-weight: 300;
-            color: $gristxt;
-            margin: 8px 0;
+        .legende {
+            margin: 8px;
+            overflow: scroll;
+            h4 {
+                margin: 8px 0;
+                font-size: 18px;
+                font-weight: 500;
+                color: #303030;
+            }
+            p {
+                font-weight: 300;
+                color: $gristxt;
+                margin: 8px 0;
+            }
+            h4, p {
+                white-space: nowrap;
+                overflow: scroll;
+                text-overflow: ellipsis;
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+                &::-webkit-scrollbar {
+                    display: none;
+                }            
+            }
         }
         .prix {
-            align-self: flex-end;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            margin: 8px;
         }
         .prix p {
             color: #303030;
             font-weight: 500;
+            margin-right: 10px;
         }
     }
     &:hover {
@@ -586,7 +610,7 @@ main.restau_menu {
     }
 }
 
-@for $i from 0 to 11 {
+@for $i from 0 to 20 {
     .anim-#{$i} {
         opacity: 0;
         animation: .4s ease-in-out calc(.2s * $i) 1 slideIn forwards;
