@@ -653,6 +653,10 @@ main.restau_menu {
         font-size: 22px;
         font-weight: 200;
         color: $primaire;
+        
+        &::after {
+            animation: 1.6s ease-in-out 0s 1 content forwards;
+        }
     }
 }
 
@@ -672,5 +676,12 @@ main.restau_menu {
     }
     100% {
         width: 100%;
+    }
+}
+@keyframes content {
+    @for $j from 0 to 101 {
+        #{$j}% {
+            content: "#{$j}%";
+        }
     }
 }
