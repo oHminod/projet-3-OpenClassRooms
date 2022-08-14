@@ -115,6 +115,11 @@ body {
         font-weight: 500;
         color: $gristxt;
         margin: 11px 0;
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f3c5\00a0\00a0\00a0";
+        }
     }
 }
 
@@ -168,7 +173,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 700px;
+    max-width: 500px;
     margin: 0 auto;
     background-color: $grisclair;
     padding: 10px;
