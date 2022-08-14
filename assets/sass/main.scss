@@ -684,17 +684,20 @@ main.restau_menu {
 }
 @keyframes content {
     @for $j from 0 to 10 {
-        #{$j}% {
+        $pourcent: $j + "%";
+        #{$pourcent} {
             content: "\00a0\00a0\00a0\00a0#{$j}%";
         }
     }
     @for $k from 10 to 100 {
-        #{$k}% {
+        $pourcent: $k + "%";
+        #{$pourcent} {
             content: "\00a0\00a0#{$k}%";
         }
     }
     @for $l from 100 to 101 {
-        #{$l}% {
+        $pourcent: $l + "%";
+        #{$pourcent} {
             content: "#{$l}%";
         }
     }
