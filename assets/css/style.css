@@ -96,13 +96,13 @@ main,
 
 @media screen and (min-width: 280px) {
   .logo i {
-    top: calc(9px + 46 * (100vw - 280px) / 744);
-    left: calc(10px + 50 * (100vw - 280px) / 744);
-    padding: 5px calc(5.75px + 1 * (100vw - 280px) / 744);
+    top: calc(9px + 46 * (100vw - 280px) / 1260);
+    left: calc(10px + 50 * (100vw - 280px) / 1260);
+    padding: 5px calc(5.75px + 1 * (100vw - 280px) / 1260);
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1540px) {
   .logo i {
     top: 55px;
     left: 60px;
@@ -112,12 +112,12 @@ main,
 
 @media screen and (min-width: 280px) {
   .logo {
-    font-size: calc(16px + 16 * (100vw - 280px) / 744);
-    padding: calc(5px + 38 * (100vw - 280px) / 744) 0;
+    font-size: calc(16px + 16 * (100vw - 280px) / 1260);
+    padding: calc(5px + 38 * (100vw - 280px) / 1260) 0;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1540px) {
   .logo {
     font-size: 32px;
     padding: 43px 0;
@@ -555,19 +555,19 @@ main.restau_menu {
 
 @media screen and (min-width: 270px) {
   .menu .menu__titre h2 {
-    font-size: calc(18px + 5 * (100vw - 270px) / 50);
+    font-size: calc(18px + 9 * (100vw - 270px) / 105);
   }
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 375px) {
   .menu .menu__titre h2 {
-    font-size: calc(23px + 13 * (100vw - 320px) / 704);
+    font-size: calc(27px + 13 * (100vw - 375px) / 1165);
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1540px) {
   .menu .menu__titre h2 {
-    font-size: 36px;
+    font-size: 40px;
   }
 }
 
