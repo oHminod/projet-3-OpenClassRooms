@@ -438,14 +438,6 @@ main.restau_menu {
     }
 }
 
-@keyframes rotatec {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-    }
-}
-
 .menu {
     position: relative;
     margin-top: -70px;
@@ -471,9 +463,12 @@ main.restau_menu {
         align-items: center;
         h2 {
             font-family: Shrikhand, cursive;
-            font-size: 20px;
-            @media screen and (min-width: 280px) {
-                font-size: calc(20px + 16 * (100vw - 280px) / 744);
+            font-size: 18px;
+            @media screen and (min-width: 270px) {
+                font-size: calc(18px + 5 * (100vw - 270px) / 50);
+            }
+            @media screen and (min-width: 320px) {
+                font-size: calc(23px + 13 * (100vw - 320px) / 704);
             }
             @media screen and (min-width: 1024px) {
                 font-size: 36px;
@@ -494,7 +489,7 @@ main.restau_menu {
         h3 {
             font-weight: 300;
             color: $gristxt;
-            
+            margin-bottom: 0;
         }
         hr {
             background-color: $tertiaire;
@@ -502,6 +497,7 @@ main.restau_menu {
             width: 50px;
             border: none;
             margin-left: 0;
+            margin-bottom: 26px;
         }
         @media screen and (min-width: 930px) {
             display: flex;
@@ -527,9 +523,8 @@ main.restau_menu {
     display: flex;
     overflow: hidden;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 15px 0;
-    transition: height .3s;
     @extend .card_shadow;
     .check {
         background-color: $tertiaire;
@@ -543,7 +538,7 @@ main.restau_menu {
             transform: rotate(180deg);
             transition: margin-right .3s, transform .4s .1s;
             color: white;
-            font-size: 20px;
+            font-size: 21px;
         }
     }
     .plats__card {
@@ -556,15 +551,16 @@ main.restau_menu {
             margin: 8px;
             overflow: scroll;
             h4 {
-                margin: 8px 0;
+                margin: 5px 0;
                 font-size: 18px;
                 font-weight: 500;
                 color: #303030;
             }
             p {
                 font-weight: 300;
+                font-size: 15px;
                 color: $gristxt;
-                margin: 8px 0;
+                margin: 5px 0;
             }
             h4, p {
                 white-space: nowrap;
@@ -582,6 +578,7 @@ main.restau_menu {
             display: flex;
             align-items: flex-end;
             margin: 8px;
+            margin-left: 0;
         }
         .prix p {
             color: #303030;
@@ -592,17 +589,19 @@ main.restau_menu {
     &:hover {
         @extend .card_shadow_hover;
         .check {
-            width: 20%;
+            width: 18%;
             i {
                 margin-right: 0;
                 transform: rotate(360deg);
             }
         }
         .plats__card {
-            width: 80%;
+            width: 82%;
         }
     }
-    
+    @media screen and (min-width: 768px) {
+        margin: 15px 5px;
+    }
 }
 
 @keyframes slideIn {
