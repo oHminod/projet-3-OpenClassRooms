@@ -1,0 +1,702 @@
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+$grisfonce: #EAEAEA;
+$grisclair: #F6F6F6;
+$gristxt: #606060;
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+.card_shadow {
+    transition: box-shadow .3s, background-color .3s;
+    box-shadow: 0px 2px 15px rgba(15, 15, 15, .25);
+}
+
+.card_shadow_hover {
+    box-shadow: 0px 7px 25px rgba(15, 15, 15, .30);
+}
+
+.btn-gradient {
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25.2px;
+    background: linear-gradient(350deg, $primaire, $secondaire);
+    color: white;
+    padding: 16px 22px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: box-shadow .3s, background-color .3s, color .3s;
+    @extend .card_shadow;
+    &:hover {
+        background: linear-gradient(170deg, #9239ff, #ff3ec8);
+        @extend .card_shadow_hover;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, sans-serif;
+    /*@media screen and (min-width: 768px) {
+        max-width: 1340px;
+        margin: 0 auto;
+    }*/
+}
+
+.max-width {
+    max-width: 1540px;
+    margin: 0 auto;
+}
+
+.logo {
+    position: relative;
+    font-family: Shrikhand, cursive;
+    font-size: 16px;
+    letter-spacing: .5px;  
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(15, 15, 15, .15);
+    padding: 5px 0;
+   i {
+        position: absolute;
+        padding: 5px 5.75px;
+        border: 2px solid transparent;
+        border-radius: 100%;
+        left: 10px;
+        top: 9px;
+        color: #303030;
+        transition: color .2s, border .3s;
+        &:hover {
+            border: 2px solid $primaire;
+            color: $primaire;
+        }
+        @media screen and (min-width: 280px) {
+            top: calc(9px + 46 * (100vw - 280px) / 744);
+            left: calc(10px + 50 * (100vw - 280px) / 744);
+            padding: 5px calc(5.75px + 1 * (100vw - 280px) / 744);
+        }
+        @media screen and (min-width: 1024px) {
+            top: 55px;
+            left: 60px;
+            padding: 5px 6.75px;
+        }
+    }
+    @media screen and (min-width: 280px) {
+        font-size: calc(16px + 16 * (100vw - 280px) / 744);
+        padding: calc(5px + 38 * (100vw - 280px) / 744) 0;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 32px;
+        padding: 43px 0;
+    }
+    h1 {
+        margin: 0;
+    }
+    &.no-shadow {
+        box-shadow: none;
+    }
+}
+
+.lieu {
+    background-color: $grisfonce;
+    text-align: center;
+    padding: 5px 0;
+    position: relative;
+    z-index: -1;
+    i {
+        margin-right: 15px;
+    }
+    p {
+        font-weight: 500;
+        color: $gristxt;
+        margin: 11px 0;
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f3c5\00a0\00a0\00a0";
+        }
+    }
+}
+
+.callto {
+    @extend .max-width;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 10px 10px rgba(15, 15, 15, .15);
+        transition: box-shadow .3s;
+    }
+}
+
+.reservation {
+    background-color: $grisclair;
+    padding: 40px 45px;
+    text-align: center;
+    h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        letter-spacing: .2px;
+        color: #303030;
+    }
+    p {
+        font-weight: 300;
+        letter-spacing: -.2px;
+        font-size: 17px;
+        color: $gristxt;
+    }
+    a {
+        @extend .btn-gradient;
+    }
+    @media screen and (min-width: 768px) {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.fonctionnement {
+    padding: 20px;
+    @media screen and (min-width: 768px) {
+        flex-basis: 50%;
+        text-align: center;
+    }
+}
+
+.fonctionnement__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: $grisclair;
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    @extend .card_shadow;
+    p {
+        font-weight: 500;
+        text-align: center;
+        display: block;
+        width: 100%;
+        &:first-child {
+            color: white;
+            background-color: $primaire;
+            border-radius: 100%;
+            padding: 8px;
+            margin: 0;
+            height: 6.7px;
+            line-height: 6.7px;
+            font-size: 12px;
+            margin-left: -21px;
+            margin-right: 5px;
+            width: auto;
+        }
+    }
+    i {
+        margin-right: 8%;
+        font-size: 18px;
+        color: $gristxt;
+        transition: color .3s;
+    }
+    &:nth-child(2) {
+        i {
+            margin-left: 20px;
+        }
+    }
+    &:hover {
+        @extend .card_shadow_hover;
+        background-color: #F5EDFF;
+        i {
+            color: $primaire;
+        }
+    }
+}
+main {
+    padding: 20px;
+    flex: 1 0 auto;
+    @extend .max-width;
+    @media screen and (max-width: 768px) {
+        margin: 0;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 20px 0;
+    }
+    h2 {
+        @media screen and (min-width: 768px) {
+            margin-left: 20px;
+        }
+    }
+}
+
+.restaubox {
+    position: relative;
+    max-width: 100vw;
+    .masque-g {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            left:0;
+            width: 20px;
+            height: 100%;
+            background: linear-gradient(270deg, transparent, white);
+        }
+    }
+    .masque-d {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            right:0;
+            width: 20px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, white);
+        }
+    }
+}
+.restaurants {
+    .dernier-espace {
+        min-width: 20px;
+    }
+        @media screen and (min-width: 768px) {
+        overflow: scroll;
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        } 
+    }
+}
+.restau__card {
+    text-decoration: none;
+    display: block;
+    color: #303030;
+    position: relative;
+    max-height: 250px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 15px;
+    @extend .card_shadow;
+    img {
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .nouveau {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: $tertiaire;
+        padding: 8px;
+        font-size: 14px;
+        color: green;
+        font-weight: 500;
+    }
+    .legende {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h3 {
+        margin: 10px;
+        margin-left: 15px;
+    }
+    p {
+        margin: 10px;
+        margin-left: 15px;
+        font-weight: 300;
+        color: $gristxt;
+    }
+    &:hover {
+        @extend .card_shadow_hover;
+    }
+    @media screen and (min-width: 768px) {
+        margin: 20px;
+        min-width: 400px;
+    }
+}
+
+.coeur {
+    margin-right: 15px;
+    font-size: 20px;
+    position: relative;
+    .fa-gradient {
+        color: $primaire;
+        background: -webkit-linear-gradient(230deg, $primaire, $secondaire);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    i {
+        transition: opacity .3s;
+    }
+    i:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 1px;
+        opacity: 0%;
+    }
+    &:hover {
+        cursor: pointer;
+        i:first-child {
+            opacity: 0%;
+        }
+        i:nth-child(2) {
+            opacity: 100%;
+        }
+     }
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #303030;
+    padding: 30px;
+    color: white;
+    width: calc(100% - 60px);
+    max-width: 1480px;
+    margin: 0 auto;
+    margin-top: 30px;
+    h2 {
+        font-family: Shrikhand, cursive;
+        width: 100%;
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: $secondaire;
+        }
+    }
+    p {
+        margin: 10px 0;
+        margin-right: 30px;
+        font-weight: 300;
+        &:nth-child(2) {
+            font-weight: 500;
+        }
+        &:nth-child(3) {
+            font-weight: 500;
+        }
+    }
+    i {
+        font-size: 14px;
+        margin-right: 15px;
+        &.rotate {
+            transform: rotate(-45deg);
+            font-size: 10px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;    
+    }
+}
+
+
+
+
+/*  RESTAURANTS
+
+
+*/
+
+
+main.restau_menu {
+    width: 100%;
+    @extend .max-width;
+    margin-bottom: -30px;
+    padding: 0;
+    padding-bottom: 30px;
+    background-color: $grisclair;
+}
+
+.banner {
+    .image img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+}
+
+@keyframes rotatec {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+    }
+}
+
+.menu {
+    position: relative;
+    margin-top: -70px;
+    background: $grisclair;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    z-index: 5;
+    .full-width {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .commander {
+        @extend .btn-gradient;
+        opacity: 0;
+        margin: 30px 0;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .menu__titre {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            font-family: Shrikhand, cursive;
+            font-size: 20px;
+            @media screen and (min-width: 280px) {
+                font-size: calc(20px + 16 * (100vw - 280px) / 744);
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 36px;
+            }
+        }
+        p.heart {
+            @extend .coeur;
+            font-size: 24px;
+            @media screen and (min-width: 280px) {
+                font-size: calc(24px + 14 * (100vw - 280px) / 744);
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 38px;
+            }
+        }
+    }
+    .menu__menu {
+        h3 {
+            font-weight: 300;
+            color: $gristxt;
+            
+        }
+        hr {
+            background-color: $tertiaire;
+            height: 3px;
+            width: 50px;
+            border: none;
+            margin-left: 0;
+        }
+        @media screen and (min-width: 930px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .plats {
+                flex-basis: calc(50% - 7px);
+            }
+        }
+        @media screen and (min-width: 1390px) {
+            .plats {
+                flex-basis: calc(33.33% - 7px);
+            }
+        }
+    }
+   
+}
+
+
+.card__wrap {
+    opacity: 0;
+    text-decoration: none;
+    display: flex;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    margin: 15px 0;
+    transition: height .3s;
+    @extend .card_shadow;
+    .check {
+        background-color: $tertiaire;
+        width: 0%;
+        transition: width .3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            margin-right: -16px;
+            transform: rotate(180deg);
+            transition: margin-right .3s, transform .4s .1s;
+            color: white;
+            font-size: 20px;
+        }
+    }
+    .plats__card {
+        display: flex;
+        border-radius: 10px;
+        justify-content: space-between;
+        width: 100%;
+        transition: width .3s, height .3s;
+        .legende {
+            margin: 8px;
+            overflow: scroll;
+            h4 {
+                margin: 8px 0;
+                font-size: 18px;
+                font-weight: 500;
+                color: #303030;
+            }
+            p {
+                font-weight: 300;
+                color: $gristxt;
+                margin: 8px 0;
+            }
+            h4, p {
+                white-space: nowrap;
+                overflow: scroll;
+                text-overflow: ellipsis;
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+                &::-webkit-scrollbar {
+                    display: none;
+                }            
+            }
+        }
+        .prix {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            margin: 8px;
+        }
+        .prix p {
+            color: #303030;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+    }
+    &:hover {
+        @extend .card_shadow_hover;
+        .check {
+            width: 20%;
+            i {
+                margin-right: 0;
+                transform: rotate(360deg);
+            }
+        }
+        .plats__card {
+            width: 80%;
+        }
+    }
+    
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0%;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@for $i from 0 to 21 {
+    .anim-#{$i} {
+        opacity: 0;
+        animation: .4s ease-in-out calc(.2s * $i) 1 slideIn forwards;
+    }
+}
+
+
+
+
+/* LOADER
+
+
+*/
+
+
+
+.loader {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 300;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: $tertiaire;
+    animation: .4s ease-in-out 1.6s 1 loader forwards;
+    .progress_container {
+        width: 60%;
+    }
+    .progress {
+        height: 30px;
+        background-color: $secondaire;
+        animation: 1.6s ease-in-out 0s 1 progress forwards;
+    }
+    p {
+        font-size: 22px;
+        font-weight: 200;
+        color: $primaire;
+        
+        &::after {
+            animation: 1.6s ease-in-out 0s 1 content forwards;
+        }
+    }
+}
+
+@keyframes loader {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes content {
+    @for $j from 0 to 10 {
+        #{$j}% {
+            content: "\00a0\00a0\00a0\00a0#{$j}%";
+        }
+    }
+    @for $k from 10 to 100 {
+        #{$k}% {
+            content: "\00a0\00a0#{$k}%";
+        }
+    }
+    @for $l from 100 to 101 {
+        #{$l}% {
+            content: "#{$l}%";
+        }
+    }
+}
