@@ -240,7 +240,7 @@ main {
         padding: 20px 0;
         background-color: white;
     }
-    h2 {
+    h2.accueil {
         color: #303030;
         @media screen and (min-width: 440px) {
             margin-left: calc(0px + 150 * (100vw - 440px) / 328);
@@ -491,9 +491,11 @@ main.restau_menu {
             }
             @media screen and (min-width: 375px) {
                 font-size: calc(27px + 13 * (100vw - 375px) / 1165);
+                margin-left: calc(0px + 30 * (100vw - 375px) / 1165);
             }
             @media screen and (min-width: 1540px) {
                 font-size: 40px;
+                margin-left: 30px;
             }
         }
         p.heart {
