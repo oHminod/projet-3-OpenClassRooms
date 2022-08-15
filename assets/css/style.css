@@ -27,7 +27,7 @@ body {
 .btn-gradient:hover,
 .menu .commander:hover,
 .reservation a:hover {
-  box-shadow: 0px 7px 25px rgba(15, 15, 15, 0.3);
+  box-shadow: 0px 5px 20px rgba(15, 15, 15, 0.3);
 }
 
 .btn-gradient,
@@ -76,6 +76,7 @@ main,
   text-align: center;
   box-shadow: 0px 2px 5px rgba(15, 15, 15, 0.15);
   padding: 5px 0;
+  margin-top: 8px;
 }
 
 .logo i {
@@ -445,9 +446,9 @@ main {
 footer {
   flex-shrink: 0;
   background-color: #303030;
-  padding: 30px;
+  padding: 25px;
   color: white;
-  width: calc(100% - 60px);
+  width: calc(100% - 50px);
   max-width: 1480px;
   margin: 0 auto;
   margin-top: 30px;
@@ -471,7 +472,7 @@ footer a:hover {
 }
 
 footer p {
-  margin: 10px 0;
+  margin: 8px 0;
   margin-right: 30px;
   font-weight: 300;
 }
@@ -486,7 +487,7 @@ footer p:nth-child(3) {
 
 footer i {
   font-size: 14px;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 footer i.rotate {
@@ -515,18 +516,30 @@ main.restau_menu {
 
 .banner .image img {
   width: 100%;
-  height: 30vh;
+  height: 270px;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+@media screen and (min-width: 270px) {
+  .banner .image img {
+    height: calc(270px + 230 * (100vw - 270px) / 1270);
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  .banner .image img {
+    height: 500px;
+  }
 }
 
 .menu {
   position: relative;
   margin-top: -70px;
   background: #F6F6F6;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  padding: 20px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 15px;
   z-index: 5;
 }
 
@@ -537,7 +550,7 @@ main.restau_menu {
 
 .menu .commander {
   opacity: 0;
-  margin: 30px 0;
+  margin-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -591,6 +604,7 @@ main.restau_menu {
   font-weight: 300;
   color: #606060;
   margin-bottom: 0;
+  font-size: 16px;
 }
 
 .menu .menu__menu hr {
@@ -599,7 +613,7 @@ main.restau_menu {
   width: 50px;
   border: none;
   margin-left: 0;
-  margin-bottom: 26px;
+  margin-bottom: 15px;
 }
 
 @media screen and (min-width: 930px) {
@@ -618,6 +632,14 @@ main.restau_menu {
   .menu .menu__menu .plats {
     flex-basis: calc(33.33% - 7px);
   }
+}
+
+.menu .plats {
+  margin-bottom: 40px;
+}
+
+.menu .plats:nth-last-child(2) {
+  margin-bottom: 30px;
 }
 
 .card__wrap {
