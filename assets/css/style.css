@@ -58,7 +58,6 @@ body {
 
 .max-width,
 main.restau_menu,
-main,
 .callto {
   max-width: 1540px;
   margin: 0 auto;
@@ -282,6 +281,7 @@ main {
   padding-bottom: 50px;
   flex: 1 0 auto;
   background-color: #F6F6F6;
+  width: calc(100% - 40px);
 }
 
 @media screen and (max-width: 768px) {
@@ -294,6 +294,13 @@ main {
   main {
     padding: 20px 0;
     background-color: white;
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  main {
+    max-width: 1540px;
+    margin: 0 auto;
   }
 }
 
@@ -714,6 +721,14 @@ main.restau_menu {
 .card__wrap .plats__card .legende {
   margin: 8px;
   overflow: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.card__wrap .plats__card .legende::-webkit-scrollbar {
+  display: none;
 }
 
 .card__wrap .plats__card .legende h4 {
@@ -943,7 +958,7 @@ main.restau_menu {
   z-index: 300;
   top: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #99E2D0;
   -webkit-animation: 0.4s ease-in-out 1.6s 1 loader forwards;
   animation: 0.4s ease-in-out 1.6s 1 loader forwards;

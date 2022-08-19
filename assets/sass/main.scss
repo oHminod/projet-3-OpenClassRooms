@@ -232,13 +232,17 @@ main {
     padding-bottom: 50px;
     flex: 1 0 auto;
     background-color: $grisclair;
-    @extend .max-width;
+    width: calc(100% - 40px);
     @media screen and (max-width: 768px) {
         margin: 0;
     }
     @media screen and (min-width: 768px) {
         padding: 20px 0;
         background-color: white;
+    }
+    @media screen and (min-width: 1540px) {
+        max-width: 1540px;
+        margin: 0 auto;
     }
     h2.accueil {
         color: #303030;
@@ -580,6 +584,11 @@ main.restau_menu {
         .legende {
             margin: 8px;
             overflow: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            &::-webkit-scrollbar {
+                display: none;
+            } 
             h4 {
                 margin: 5px 0;
                 font-size: 18px;
@@ -672,7 +681,7 @@ main.restau_menu {
     z-index: 300;
     top: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: $tertiaire;
     animation: .4s ease-in-out 1.6s 1 loader forwards;
     .progress_container {
