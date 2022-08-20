@@ -34,7 +34,8 @@ html, body {
     transition: box-shadow .3s, background-color .3s, color .3s;
     @extend .card_shadow;
     &:hover {
-        background: linear-gradient(170deg, #9239ff, #ff3ec8);
+        //background: linear-gradient(170deg, #9239ff, #ff3ec8);
+        background: linear-gradient(350deg, lighten($primaire, 5%), lighten($secondaire, 5%));
         @extend .card_shadow_hover;
     }
 }
@@ -232,7 +233,7 @@ main {
     padding-bottom: 50px;
     flex: 1 0 auto;
     background-color: $grisclair;
-    width: calc(100% - 40px);
+    //width: calc(100% - 40px);
     @media screen and (max-width: 768px) {
         margin: 0;
     }

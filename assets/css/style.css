@@ -47,7 +47,7 @@ body {
 .btn-gradient:hover,
 .menu .commander:hover,
 .reservation a:hover {
-  background: linear-gradient(170deg, #9239ff, #ff3ec8);
+  background: linear-gradient(350deg, #a16be0, #ff93e1);
 }
 
 body {
@@ -281,7 +281,6 @@ main {
   padding-bottom: 50px;
   flex: 1 0 auto;
   background-color: #F6F6F6;
-  width: calc(100% - 40px);
 }
 
 @media screen and (max-width: 768px) {
