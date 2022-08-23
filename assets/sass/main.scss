@@ -699,6 +699,7 @@ main.restau_menu {
         color: $primaire;
         
         &::after {
+            content: "\00a0\00a0\00a0\00a00%";
             animation: 1.6s ease-in-out 0s 1 content forwards;
         }
     }

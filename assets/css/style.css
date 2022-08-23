@@ -981,6 +981,7 @@ main.restau_menu {
 }
 
 .loader p::after {
+  content: "   ਀%";
   -webkit-animation: 1.6s ease-in-out 0s 1 content forwards;
   animation: 1.6s ease-in-out 0s 1 content forwards;
 }
