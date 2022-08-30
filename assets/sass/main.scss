@@ -14,7 +14,7 @@ html, body {
 }
 
 .card_shadow {
-    transition: box-shadow .3s, background-color .3s;
+    transition: box-shadow .3s;
     box-shadow: 0px 2px 15px rgba(15, 15, 15, .25);
 }
 
@@ -31,8 +31,8 @@ html, body {
     padding: 16px 22px;
     margin-top: 15px;
     margin-bottom: 15px;
-    transition: box-shadow .3s, background-color .3s, color .3s;
     @extend .card_shadow;
+    transition: box-shadow .3s, background-color 3s;
     &:hover {
         //background: linear-gradient(170deg, #9239ff, #ff3ec8);
         background: linear-gradient(350deg, lighten($primaire, 5%), lighten($secondaire, 5%));
@@ -189,6 +189,7 @@ body {
     border-radius: 25px;
     margin-bottom: 30px;
     @extend .card_shadow;
+    transition: box-shadow .3s, background-color .3s;
     p {
         font-weight: 500;
         text-align: center;
