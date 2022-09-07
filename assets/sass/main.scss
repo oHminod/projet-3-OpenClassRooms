@@ -34,7 +34,7 @@ html, body {
     @extend .card_shadow;
     transition: box-shadow .3s, background-color .3s;
     &:hover {
-        background: linear-gradient(350deg, lighten($primaire, 5%), lighten($secondaire, 5%));
+        background-color: linear-gradient(350deg, lighten($primaire, 5%), lighten($secondaire, 5%));
         @extend .card_shadow_hover;
     }
 }
@@ -58,7 +58,6 @@ body {
     text-align: center;
     box-shadow: 0px 2px 5px rgba(15, 15, 15, .15);
     padding: 5px 0;
-    margin-top: 8px;
    i {
         position: absolute;
         padding: 5px 5.75px;
