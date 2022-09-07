@@ -41,13 +41,13 @@ body {
   padding: 16px 22px;
   margin-top: 15px;
   margin-bottom: 15px;
-  transition: box-shadow 0.3s, background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-gradient:hover,
 .menu .commander:hover,
 .reservation a:hover {
-  background-color: linear-gradient(350deg, #a16be0, #ff93e1);
+  background: linear-gradient(350deg, #a16be0, #ff93e1);
 }
 
 body {

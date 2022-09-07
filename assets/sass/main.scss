@@ -32,9 +32,9 @@ html, body {
     margin-top: 15px;
     margin-bottom: 15px;
     @extend .card_shadow;
-    transition: box-shadow .3s, background-color .3s;
+    transition: all .3s;
     &:hover {
-        background-color: linear-gradient(350deg, lighten($primaire, 5%), lighten($secondaire, 5%));
+        background: linear-gradient(350deg, lighten($primaire, 5%), lighten($secondaire, 5%));
         @extend .card_shadow_hover;
     }
 }
